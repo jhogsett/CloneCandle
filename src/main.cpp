@@ -24,6 +24,7 @@ will be 0x23 (by default).
 
 */
 
+#include <Arduino.h>
 #include <Wire.h>
 #include <BH1750.h>
 #include "Adafruit_PWMServoDriver.h"

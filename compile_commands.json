@@ -1,0 +1,212 @@
+[
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\CDC.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\CDC.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\CDC.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\CDC.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial0.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial0.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial0.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial0.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial1.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial1.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial1.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial1.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial2.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial2.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial2.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial2.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial3.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial3.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\HardwareSerial3.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\HardwareSerial3.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\IPAddress.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\IPAddress.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\IPAddress.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\IPAddress.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\PluggableUSB.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\PluggableUSB.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\PluggableUSB.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\PluggableUSB.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\Print.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\Print.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\Print.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\Print.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\Stream.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\Stream.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\Stream.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\Stream.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\Tone.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\Tone.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\Tone.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\Tone.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\USBCore.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\USBCore.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\USBCore.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\USBCore.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\WInterrupts.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\WInterrupts.c",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\WInterrupts.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\WInterrupts.c.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\WMath.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\WMath.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\WMath.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\WMath.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\WString.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\WString.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\WString.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\WString.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\abi.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\abi.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\abi.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\abi.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\hooks.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\hooks.c",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\hooks.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\hooks.c.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\main.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\main.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\main.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\main.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\new.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\new.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\new.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\new.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring.c",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring.c.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_analog.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_analog.c",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_analog.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_analog.c.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_digital.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_digital.c",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_digital.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_digital.c.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -mmcu=atmega328p -x assembler-with-cpp -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs -c -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_pulse.S.o C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_pulse.S",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_pulse.S",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_pulse.S.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_pulse.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_pulse.c",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_pulse.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_pulse.c.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_shift.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_shift.c",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino\\wiring_shift.c",
+        "output": ".pio\\build\\nanoatmega328new\\FrameworkArduino\\wiring_shift.c.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\libdcd\\Wire\\Wire.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\Wire\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\Wire\\src\\Wire.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\Wire\\src\\Wire.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\libdcd\\Wire\\Wire.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-gcc.exe -o .pio\\build\\nanoatmega328new\\libdcd\\Wire\\utility\\twi.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\Wire\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\Wire\\src\\utility\\twi.c",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\Wire\\src\\utility\\twi.c",
+        "output": ".pio\\build\\nanoatmega328new\\libdcd\\Wire\\utility\\twi.c.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\libc59\\BH1750\\BH1750.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio\\libdeps\\nanoatmega328new\\BH1750\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\Wire\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs .pio\\libdeps\\nanoatmega328new\\BH1750\\src\\BH1750.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": ".pio\\libdeps\\nanoatmega328new\\BH1750\\src\\BH1750.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\libc59\\BH1750\\BH1750.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\libbab\\SPI\\SPI.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\SPI\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\SPI\\src\\SPI.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "C:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\SPI\\src\\SPI.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\libbab\\SPI\\SPI.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o \".pio\\build\\nanoatmega328new\\libe25\\Adafruit BusIO\\Adafruit_BusIO_Register.cpp.o\" -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 \"-I.pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\" -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\SPI\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\Wire\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs \".pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\\Adafruit_BusIO_Register.cpp\"",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": ".pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\\Adafruit_BusIO_Register.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\libe25\\Adafruit BusIO\\Adafruit_BusIO_Register.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o \".pio\\build\\nanoatmega328new\\libe25\\Adafruit BusIO\\Adafruit_GenericDevice.cpp.o\" -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 \"-I.pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\" -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\SPI\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\Wire\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs \".pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\\Adafruit_GenericDevice.cpp\"",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": ".pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\\Adafruit_GenericDevice.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\libe25\\Adafruit BusIO\\Adafruit_GenericDevice.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o \".pio\\build\\nanoatmega328new\\libe25\\Adafruit BusIO\\Adafruit_I2CDevice.cpp.o\" -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 \"-I.pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\" -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\SPI\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\Wire\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs \".pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\\Adafruit_I2CDevice.cpp\"",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": ".pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\\Adafruit_I2CDevice.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\libe25\\Adafruit BusIO\\Adafruit_I2CDevice.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o \".pio\\build\\nanoatmega328new\\libe25\\Adafruit BusIO\\Adafruit_SPIDevice.cpp.o\" -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 \"-I.pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\" -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\SPI\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\Wire\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs \".pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\\Adafruit_SPIDevice.cpp\"",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": ".pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\\Adafruit_SPIDevice.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\libe25\\Adafruit BusIO\\Adafruit_SPIDevice.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o \".pio\\build\\nanoatmega328new\\lib724\\Adafruit PWM Servo Driver Library\\Adafruit_PWMServoDriver.cpp.o\" -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 \"-I.pio\\libdeps\\nanoatmega328new\\Adafruit PWM Servo Driver Library\" \"-I.pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\" -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\SPI\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\Wire\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs \".pio\\libdeps\\nanoatmega328new\\Adafruit PWM Servo Driver Library\\Adafruit_PWMServoDriver.cpp\"",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": ".pio\\libdeps\\nanoatmega328new\\Adafruit PWM Servo Driver Library\\Adafruit_PWMServoDriver.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\lib724\\Adafruit PWM Servo Driver Library\\Adafruit_PWMServoDriver.cpp.o"
+    },
+    {
+        "command": "C:\\Users\\jhogs\\.platformio\\packages\\toolchain-atmelavr\\bin\\avr-g++.exe -o .pio\\build\\nanoatmega328new\\src\\main.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60118 -DARDUINO_AVR_NANO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Iinclude -Isrc -Ilib\\TrendDetector -Ilib\\WindowedMean \"-I.pio\\libdeps\\nanoatmega328new\\Adafruit PWM Servo Driver Library\" \"-I.pio\\libdeps\\nanoatmega328new\\Adafruit BusIO\" -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\SPI\\src -I.pio\\libdeps\\nanoatmega328new\\BH1750\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\libraries\\Wire\\src -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\cores\\arduino -IC:\\Users\\jhogs\\.platformio\\packages\\framework-arduino-avr\\variants\\eightanaloginputs src\\main.cpp",
+        "directory": "C:\\DEV\\CloneCandle",
+        "file": "src\\main.cpp",
+        "output": ".pio\\build\\nanoatmega328new\\src\\main.cpp.o"
+    }
+]
