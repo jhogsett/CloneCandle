@@ -42,9 +42,10 @@ float avg_loop_time_ms = 0;  // Running average of actual loop time
 
 // Time-based parameter configuration (in milliseconds)
 // These define the response characteristics of the adaptive system
-#define FAST_RESPONSE_TIME_MS  150.0   // How quickly to track flicker changes (~15 samples @ 10ms/sample)
-#define SLOW_RESPONSE_TIME_MS  5000.0  // How slowly to track ambient/baseline (~500 samples @ 10ms/sample)
-#define TREND_RESPONSE_TIME_MS 1000.0  // Smoothing for rate-of-change detection (~100 samples @ 10ms/sample)
+// Calibrated based on measured loop time of 1.75ms
+#define FAST_RESPONSE_TIME_MS  26.25   // How quickly to track flicker changes (15 samples @ 1.75ms/sample)
+#define SLOW_RESPONSE_TIME_MS  875.0   // How slowly to track ambient/baseline (500 samples @ 1.75ms/sample)
+#define TREND_RESPONSE_TIME_MS 175.0   // Smoothing for rate-of-change detection (100 samples @ 1.75ms/sample)
 
 // Convert time-based parameters to sample counts (calculated in setup)
 long FAST_WINDOW;
@@ -95,7 +96,7 @@ void TCA9548A(uint8_t bus){
 }
 
 void setup() {
-  Serial.begin(115200);
+  //Serial.begin(115200);
 
   // Initialize the I2C bus (BH1750 library doesn't do this automatically)
   Wire.begin();
