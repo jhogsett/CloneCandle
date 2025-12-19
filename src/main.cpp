@@ -35,12 +35,24 @@ BH1750 lightMeter2;
 BH1750 lightMeter3;
 // BH1750 lightMeter4;
 
+// Timing infrastructure for time-based parameters
+unsigned long last_loop_time = 0;
+float loop_time_ms = 0;
+float avg_loop_time_ms = 0;  // Running average of actual loop time
 
-#define FAST_WINDOW 15
-#define SLOW_WINDOW 500
-#define TREND_WINDOW 100
-#define TREND_SENSE 0.25
-#define SETTLED_WINDOW 0.25
+// Time-based parameter configuration (in milliseconds)
+// These define the response characteristics of the adaptive system
+#define FAST_RESPONSE_TIME_MS  150.0   // How quickly to track flicker changes (~15 samples @ 10ms/sample)
+#define SLOW_RESPONSE_TIME_MS  5000.0  // How slowly to track ambient/baseline (~500 samples @ 10ms/sample)
+#define TREND_RESPONSE_TIME_MS 1000.0  // Smoothing for rate-of-change detection (~100 samples @ 10ms/sample)
+
+// Convert time-based parameters to sample counts (calculated in setup)
+long FAST_WINDOW;
+long SLOW_WINDOW;
+long TREND_WINDOW;
+
+#define TREND_SENSE 0.25      // Sensitivity multiplier for trend detection
+#define SETTLED_WINDOW 0.25   // Threshold for "settled" state
 // #define TREND_BOOST 2
 
 // Nov 22, 2011 — PWM: 3, 5, 6, 9, 10, and 11. Provide 8-bit PWM output with the analogWrite() function. However, pin 3 is Reset.Read more
@@ -83,7 +95,7 @@ void TCA9548A(uint8_t bus){
 }
 
 void setup() {
-  // Serial.begin(115200);
+  Serial.begin(115200);
 
   // Initialize the I2C bus (BH1750 library doesn't do this automatically)
   Wire.begin();
@@ -111,7 +123,40 @@ void setup() {
   // lightMeter4.begin();
   // float lux4 = lightMeter4.readLightLevel();
 
-  // Serial.println(F("BH1750 Test begin"));
+  // Calibrate loop timing by running several iterations
+  Serial.println(F("Calibrating loop timing..."));
+  unsigned long cal_start = millis();
+  for(int i = 0; i < 20; i++) {
+    TCA9548A(0); lightMeter1.readLightLevel();
+    TCA9548A(1); lightMeter2.readLightLevel();
+    TCA9548A(2); lightMeter3.readLightLevel();
+  }
+  unsigned long cal_time = millis() - cal_start;
+  avg_loop_time_ms = cal_time / 20.0;
+  
+  // Calculate window sizes in samples based on desired time and measured loop speed
+  FAST_WINDOW = max(1L, (long)(FAST_RESPONSE_TIME_MS / avg_loop_time_ms));
+  SLOW_WINDOW = max(1L, (long)(SLOW_RESPONSE_TIME_MS / avg_loop_time_ms));
+  TREND_WINDOW = max(1L, (long)(TREND_RESPONSE_TIME_MS / avg_loop_time_ms));
+  
+  Serial.print(F("Loop time: "));
+  Serial.print(avg_loop_time_ms);
+  Serial.println(F(" ms"));
+  Serial.print(F("Fast window: "));
+  Serial.print(FAST_WINDOW);
+  Serial.print(F(" samples ("));
+  Serial.print(FAST_RESPONSE_TIME_MS);
+  Serial.println(F(" ms)"));
+  Serial.print(F("Slow window: "));
+  Serial.print(SLOW_WINDOW);
+  Serial.print(F(" samples ("));
+  Serial.print(SLOW_RESPONSE_TIME_MS);
+  Serial.println(F(" ms)"));
+  Serial.print(F("Trend window: "));
+  Serial.print(TREND_WINDOW);
+  Serial.print(F(" samples ("));
+  Serial.print(TREND_RESPONSE_TIME_MS);
+  Serial.println(F(" ms)"));
 
   trend_detector1_main = new TrendDetector(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW, TREND_SENSE, SETTLED_WINDOW, lux1);
   trend_detector1_high = new TrendDetector(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW, TREND_SENSE, SETTLED_WINDOW, lux1);
@@ -134,7 +179,14 @@ void setup() {
 }
 
 void loop() {
-  // Serial.println("--------");
+  // Measure actual loop timing
+  unsigned long current_time = millis();
+  if(last_loop_time > 0) {
+    loop_time_ms = current_time - last_loop_time;
+    // Update running average (slow smoothing)
+    avg_loop_time_ms = avg_loop_time_ms * 0.99 + loop_time_ms * 0.01;
+  }
+  last_loop_time = current_time;
 
   TCA9548A(0);
   float lux1 = lightMeter1.readLightLevel();
@@ -250,17 +302,20 @@ void loop() {
     digitalWrite(LED_SETTLED_2, trend_detector2_main->settled() ? HIGH : LOW);
     digitalWrite(LED_SETTLED_3, trend_detector3_main->settled() ? HIGH : LOW);
 
-    Serial.print(range1);
-    Serial.print(",");
-    Serial.print(range2);
-    Serial.print(",");
-    Serial.print(range3);
-    Serial.print(",");
-    Serial.print(ival1);
-    Serial.print(",");
-    Serial.print(ival2);
-    Serial.print(",");
-    Serial.println(ival3);
+    Serial.print(F("Loop:"));
+    Serial.print(avg_loop_time_ms, 1);
+    Serial.print(F("ms R1:"));
+    Serial.print(range1, 1);
+    Serial.print(F(" R2:"));
+    Serial.print(range2, 1);
+    Serial.print(F(" R3:"));
+    Serial.print(range3, 1);
+    Serial.print(F(" PWM:"));
+    Serial.print(ival1, 0);
+    Serial.print(F(","));
+    Serial.print(ival2, 0);
+    Serial.print(F(","));
+    Serial.println(ival3, 0);
 
     report = REPORT_RATE;
   }
