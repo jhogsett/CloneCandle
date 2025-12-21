@@ -28,7 +28,7 @@ will be 0x23 (by default).
 #include <Wire.h>
 #include <BH1750.h>
 #include "Adafruit_PWMServoDriver.h"
-#include <trend_detector.h>
+#include <adaptive_agc.h>
 
 BH1750 lightMeter1;
 BH1750 lightMeter2;
@@ -45,15 +45,15 @@ float avg_loop_time_ms = 0;  // Running average of actual loop time
 // Calibrated based on measured loop time of 1.75ms
 #define FAST_RESPONSE_TIME_MS  26.25   // How quickly to track flicker changes (15 samples @ 1.75ms/sample)
 #define SLOW_RESPONSE_TIME_MS  875.0   // How slowly to track ambient/baseline (500 samples @ 1.75ms/sample)
-#define TREND_RESPONSE_TIME_MS 175.0   // Smoothing for rate-of-change detection (100 samples @ 1.75ms/sample)
+#define TREND_RESPONSE_TIME_MS 525.0   // Smoothing for rate-of-change detection (100 samples @ 1.75ms/sample)
 
 // Convert time-based parameters to sample counts (calculated in setup)
 long FAST_WINDOW;
 long SLOW_WINDOW;
 long TREND_WINDOW;
 
-#define TREND_SENSE 0.25      // Sensitivity multiplier for trend detection
-#define SETTLED_WINDOW 0.25   // Threshold for "settled" state
+#define TREND_SENSE 0.5      // Sensitivity multiplier for trend detection
+#define SETTLED_WINDOW 0.1   // Threshold for "settled" state
 // #define TREND_BOOST 2
 
 // Nov 22, 2011 — PWM: 3, 5, 6, 9, 10, and 11. Provide 8-bit PWM output with the analogWrite() function. However, pin 3 is Reset.Read more
@@ -73,15 +73,10 @@ long TREND_WINDOW;
 #define PWM_MAX 4095.0 // 256.0
 #define RANGE_EXPANSION 256.0 // Brightness
 
-TrendDetector *trend_detector1_main;
-TrendDetector *trend_detector1_high;
-TrendDetector *trend_detector1_low;
-TrendDetector *trend_detector2_main;
-TrendDetector *trend_detector2_high;
-TrendDetector *trend_detector2_low;
-TrendDetector *trend_detector3_main;
-TrendDetector *trend_detector3_high;
-TrendDetector *trend_detector3_low;
+// Adaptive AGC instances - one per channel
+AdaptiveAGC *agc1;
+AdaptiveAGC *agc2;
+AdaptiveAGC *agc3;
 
 #define REPORT_RATE 50
 int report = REPORT_RATE;
@@ -163,17 +158,18 @@ void setup() {
   Serial.print(TREND_RESPONSE_TIME_MS);
   Serial.println(F(" ms)"));
 
-  trend_detector1_main = new TrendDetector(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW, TREND_SENSE, SETTLED_WINDOW, lux1);
-  trend_detector1_high = new TrendDetector(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW, TREND_SENSE, SETTLED_WINDOW, lux1);
-  trend_detector1_low = new TrendDetector(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW, TREND_SENSE, SETTLED_WINDOW, lux1);
-
-  trend_detector2_main = new TrendDetector(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW, TREND_SENSE, SETTLED_WINDOW, lux2);
-  trend_detector2_high = new TrendDetector(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW, TREND_SENSE, SETTLED_WINDOW, lux2);
-  trend_detector2_low = new TrendDetector(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW, TREND_SENSE, SETTLED_WINDOW, lux2);
-
-  trend_detector3_main = new TrendDetector(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW, TREND_SENSE, SETTLED_WINDOW, lux3);
-  trend_detector3_high = new TrendDetector(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW, TREND_SENSE, SETTLED_WINDOW, lux3);
-  trend_detector3_low = new TrendDetector(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW, TREND_SENSE, SETTLED_WINDOW, lux3);
+  // Initialize adaptive AGC instances
+  agc1 = new AdaptiveAGC(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW, 
+                         TREND_SENSE, SETTLED_WINDOW, lux1,
+                         RANGE_EXPANSION, PWM_MAX, BASE);
+  
+  agc2 = new AdaptiveAGC(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW,
+                         TREND_SENSE, SETTLED_WINDOW, lux2,
+                         RANGE_EXPANSION, PWM_MAX, BASE);
+  
+  agc3 = new AdaptiveAGC(FAST_WINDOW, SLOW_WINDOW, TREND_WINDOW,
+                         TREND_SENSE, SETTLED_WINDOW, lux3,
+                         RANGE_EXPANSION, PWM_MAX, BASE);
 
   pinMode(LED_LEVEL_1, OUTPUT);
   pinMode(LED_SETTLED_1, OUTPUT);
@@ -193,134 +189,51 @@ void loop() {
   }
   last_loop_time = current_time;
 
+  // Read sensors
   TCA9548A(I2C_SENSOR1);
   float lux1 = lightMeter1.readLightLevel();
-  // Serial.println(lux1);
 
   TCA9548A(I2C_SENSOR2);
   float lux2 = lightMeter2.readLightLevel();
-  // Serial.println(lux2);
 
   TCA9548A(I2C_SENSOR3);
   float lux3 = lightMeter3.readLightLevel();
-  // Serial.println(lux3);
 
-  // TCA9548A(3);
-  // float lux4 = lightMeter4.readLightLevel();
-  // Serial.println(lux4);
+  // Process through AGC and output to PWM
+  float pwm1 = agc1->process(lux1);
+  PCA9685.setPWM(0, 0, pwm1);
 
-  // delay(1000);
-  // Serial.print(lux1);
-  // Serial.print(",");
-  // Serial.print(lux2);
-  // Serial.print(",");
-  // Serial.println(lux3);
+  float pwm2 = agc2->process(lux2);
+  PCA9685.setPWM(1, 0, pwm2);
 
-  trend_detector1_main->sample(lux1);
-  // float mean1 = trend_detector1_main->slow_mean();
-  float mean1 = trend_detector1_main->fast_mean();
+  float pwm3 = agc3->process(lux3);
+  PCA9685.setPWM(2, 0, pwm3);
 
-  if(lux1 > mean1){
-    trend_detector1_high->sample(lux1);
-  } else {
-    trend_detector1_low->sample(lux1);
-  }
-
-
-  float range1 = trend_detector1_high->slow_mean() - trend_detector1_low->slow_mean();
-  float base1 = trend_detector1_low->slow_mean();
-  float val1 = trend_detector1_main->fast_mean() - base1;
-  // float val1 = lux1 - base1;
-  float percent1 = val1 / range1;
-
-  float ival1 = val1 * RANGE_EXPANSION;
-  int i1 = int(ival1);
-  if(i1 < 0)
-    i1 = 0;
-  else if(i1 > PWM_MAX - BASE)
-    i1 = PWM_MAX - BASE;
-  PCA9685.setPWM(0, 0, BASE + i1);
-
-
-
-
-
-
-
-
-
-  trend_detector2_main->sample(lux2);
-  // float mean2 = trend_detector2_main->slow_mean();
-  float mean2 = trend_detector2_main->fast_mean();
-
-  if(lux2 > mean2){
-    trend_detector2_high->sample(lux2);
-  } else {
-    trend_detector2_low->sample(lux2);
-  }
-
-
-  float range2 = trend_detector2_high->slow_mean() - trend_detector2_low->slow_mean();
-  float base2 = trend_detector2_low->slow_mean();
-  float val2 = trend_detector2_main->fast_mean() - base2;
-  // float val2 = lux2 - base2;
-  float percent2 = val2 / range2;
-
-  float ival2 = val2 * RANGE_EXPANSION;
-  int i2 = int(ival2);
-  if(i2 < 0)
-    i2 = 0;
-  else if(i2 > PWM_MAX - BASE)
-    i2 = PWM_MAX - BASE;
-  PCA9685.setPWM(1, 0, BASE + i2);
-
-
-  trend_detector3_main->sample(lux3);
-  // float mean3 = trend_detector3_main->slow_mean();
-  float mean3 = trend_detector3_main->fast_mean();
-
-  if(lux3 > mean3){
-    trend_detector3_high->sample(lux3);
-  } else {
-    trend_detector3_low->sample(lux3);
-  }
-
-
-  float range3 = trend_detector3_high->slow_mean() - trend_detector3_low->slow_mean();
-  float base3 = trend_detector3_low->slow_mean();
-  float val3 = trend_detector3_main->fast_mean() - base3;
-  // float val3 = lux3 - base3;
-  float percent3 = val3 / range3;
-
-  float ival3 = val3 * RANGE_EXPANSION;
-  int i3 = int(ival3);
-  if(i3 < 0)
-    i3 = 0;
-  else if(i3 > PWM_MAX - BASE)
-    i3 = PWM_MAX - BASE;
-  PCA9685.setPWM(2, 0, BASE + i3);
-
-
+  digitalWrite(LED_SETTLED_1, agc1->isSettled() ? HIGH : LOW);
+  digitalWrite(LED_SETTLED_2, agc2->isSettled() ? HIGH : LOW);
+  digitalWrite(LED_SETTLED_3, agc3->isSettled() ? HIGH : LOW);
 
   if(!--report){
-    digitalWrite(LED_SETTLED_1, trend_detector1_main->settled() ? HIGH : LOW);
-    digitalWrite(LED_SETTLED_2, trend_detector2_main->settled() ? HIGH : LOW);
-    digitalWrite(LED_SETTLED_3, trend_detector3_main->settled() ? HIGH : LOW);
+    // Update settled indicator LEDs
+    // digitalWrite(LED_SETTLED_1, agc1->isSettled() ? HIGH : LOW);
+    // digitalWrite(LED_SETTLED_2, agc2->isSettled() ? HIGH : LOW);
+    // digitalWrite(LED_SETTLED_3, agc3->isSettled() ? HIGH : LOW);
 
+    // Report status
     Serial.print(F("Loop:"));
     Serial.print(avg_loop_time_ms, 1);
     Serial.print(F("ms R1:"));
-    Serial.print(range1, 1);
+    Serial.print(agc1->getRange(), 1);
     Serial.print(F(" R2:"));
-    Serial.print(range2, 1);
+    Serial.print(agc2->getRange(), 1);
     Serial.print(F(" R3:"));
-    Serial.print(range3, 1);
+    Serial.print(agc3->getRange(), 1);
     Serial.print(F(" PWM:"));
-    Serial.print(ival1, 0);
+    Serial.print(agc1->getScaledValue(), 0);
     Serial.print(F(","));
-    Serial.print(ival2, 0);
+    Serial.print(agc2->getScaledValue(), 0);
     Serial.print(F(","));
-    Serial.println(ival3, 0);
+    Serial.println(agc3->getScaledValue(), 0);
 
     report = REPORT_RATE;
   }
