@@ -88,6 +88,10 @@ int report = REPORT_RATE;
 
 Adafruit_PWMServoDriver PCA9685 = Adafruit_PWMServoDriver(0x40, Wire);
 
+#define I2C_SENSOR1 2
+#define I2C_SENSOR2 3
+#define I2C_SENSOR3 4
+
 void TCA9548A(uint8_t bus){
     Wire.beginTransmission(0x70);  // TCA9548A address is 0x70
     Wire.write(1 << bus);          // send byte to select bus
@@ -108,15 +112,15 @@ void setup() {
   PCA9685.setPWMFreq(PWM_FREQ); //1600);  // This is the maximum PWM frequency and suited to LED's
   // PCA9685.setOutputMode(true);
 
-  TCA9548A(0);
+  TCA9548A(I2C_SENSOR1);
   lightMeter1.begin();
   float lux1 = lightMeter1.readLightLevel();
 
-  TCA9548A(1);
+  TCA9548A(I2C_SENSOR2);
   lightMeter2.begin();
   float lux2 = lightMeter1.readLightLevel();
 
-  TCA9548A(2);
+  TCA9548A(I2C_SENSOR3);
   lightMeter3.begin();
   float lux3 = lightMeter3.readLightLevel();
 
@@ -128,9 +132,9 @@ void setup() {
   Serial.println(F("Calibrating loop timing..."));
   unsigned long cal_start = millis();
   for(int i = 0; i < 20; i++) {
-    TCA9548A(0); lightMeter1.readLightLevel();
-    TCA9548A(1); lightMeter2.readLightLevel();
-    TCA9548A(2); lightMeter3.readLightLevel();
+    TCA9548A(I2C_SENSOR1); lightMeter1.readLightLevel();
+    TCA9548A(I2C_SENSOR2); lightMeter2.readLightLevel();
+    TCA9548A(I2C_SENSOR3); lightMeter3.readLightLevel();
   }
   unsigned long cal_time = millis() - cal_start;
   avg_loop_time_ms = cal_time / 20.0;
@@ -189,15 +193,15 @@ void loop() {
   }
   last_loop_time = current_time;
 
-  TCA9548A(0);
+  TCA9548A(I2C_SENSOR1);
   float lux1 = lightMeter1.readLightLevel();
   // Serial.println(lux1);
 
-  TCA9548A(1);
+  TCA9548A(I2C_SENSOR2);
   float lux2 = lightMeter2.readLightLevel();
   // Serial.println(lux2);
 
-  TCA9548A(2);
+  TCA9548A(I2C_SENSOR3);
   float lux3 = lightMeter3.readLightLevel();
   // Serial.println(lux3);
 
