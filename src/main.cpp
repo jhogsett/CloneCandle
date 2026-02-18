@@ -45,15 +45,15 @@ float avg_loop_time_ms = 0;  // Running average of actual loop time
 // Calibrated based on measured loop time of 1.75ms
 #define FAST_RESPONSE_TIME_MS  26.25   // How quickly to track flicker changes (15 samples @ 1.75ms/sample)
 #define SLOW_RESPONSE_TIME_MS  875.0   // How slowly to track ambient/baseline (500 samples @ 1.75ms/sample)
-#define TREND_RESPONSE_TIME_MS 525.0   // Smoothing for rate-of-change detection (100 samples @ 1.75ms/sample)
+#define TREND_RESPONSE_TIME_MS 999.0   // Smoothing for rate-of-change detection (100 samples @ 1.75ms/sample)
 
 // Convert time-based parameters to sample counts (calculated in setup)
 long FAST_WINDOW;
 long SLOW_WINDOW;
 long TREND_WINDOW;
 
-#define TREND_SENSE 0.5      // Sensitivity multiplier for trend detection
-#define SETTLED_WINDOW 0.1   // Threshold for "settled" state
+#define TREND_SENSE 0.25      // Sensitivity multiplier for trend detection
+#define SETTLED_WINDOW 0.25   // Threshold for "settled" state
 // #define TREND_BOOST 2
 
 // Nov 22, 2011 — PWM: 3, 5, 6, 9, 10, and 11. Provide 8-bit PWM output with the analogWrite() function. However, pin 3 is Reset.Read more
